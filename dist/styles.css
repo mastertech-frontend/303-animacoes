@@ -1,2 +1,58 @@
 body {
   margin: 0; }
+
+#pudim {
+  animation-name: mover;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse; }
+
+@keyframes mover {
+  0% {
+    transform: translateX(-100%) rotate(0); }
+  20% {
+    transform: translateX(0) rotate(0); }
+  40% {
+    transform: translateX(0) rotate(360deg); }
+  60% {
+    transform: translateX(0) translateY(100%) rotate(360deg); }
+  80% {
+    transform: translateX(100%) translateY(100%) rotate(360deg); }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(360deg);
+    opacity: 0; } }
+
+#matrix {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex; }
+  #matrix p {
+    margin: 0;
+    color: #43c900;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: translateY(-100%);
+    text-shadow: 0 0 50px pink;
+    animation: descer-texto;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite; }
+  #matrix p:nth-child(1) {
+    animation-delay: 1s; }
+  #matrix p:nth-child(2n) {
+    animation-delay: 0.5s;
+    opacity: 0.5; }
+  #matrix p:nth-child(3n) {
+    animation-delay: 3s; }
+  #matrix p:nth-child(4n) {
+    animation-delay: 1s; }
+  #matrix p:nth-child(5) {
+    animation-delay: 1.2s; }
+  #matrix p:nth-child(6) {
+    animation-delay: 0.7s; }
+
+@keyframes descer-texto {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(100%); } }

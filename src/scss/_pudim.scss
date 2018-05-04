@@ -1,0 +1,34 @@
+#pudim{
+    // animation: mover-lateral 1s infinite;
+    animation-name: mover;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes mover{
+    0%{
+        transform: translateX(-100%) rotate(0);
+    }
+
+    20%{
+        transform: translateX(0) rotate(0); 
+    }
+
+    40%{
+        transform: translateX(0) rotate(360deg);
+    }
+
+    60%{
+        transform: translateX(0) translateY(100%) rotate(360deg);
+    }
+
+    80%{
+        transform: translateX(100%) translateY(100%) rotate(360deg);
+    }
+
+    100%{
+        transform: translateX(100%) translateY(100%) rotate(360deg);
+        opacity: 0;
+    }
+}
